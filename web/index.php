@@ -13,6 +13,10 @@ $app->get('/Hallo/{name}', function ($name) use ($app) {
 	return 'Hello '.$app->escape($name);
 });
 
+$app->get('/Goodbye/{name}', function ($name) use ($app) {
+	return 'Hello '.$app->escape($name);
+});
+
 $app->get('/', function () use ($app) {
 	return $app->redirect('/hello/world');
 });
